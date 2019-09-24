@@ -10,27 +10,31 @@ public class UnitSearch {
 	private static final String DEFAULT_MESSAGE = "Sorry, no conversions found";
 	private Collection<Unit> conversions = new ArrayList<Unit>();
 	
-	public void addConversion(Unit dict) {
-		conversions.add(dict);
+	public void addConversion(Unit unit) {
+		conversions.add(unit);
 	}
 
-	public void removeConversion(Unit dict) {
-		conversions.remove(dict);
+	public void removeConversion(Unit unit) {
+		conversions.remove(unit);
 	}
 	
 	public UnitSearch(Unit... units) {
 		conversions.addAll(Arrays.asList(units));
 	}
 	
-	private UnitSearchResult search(String searchKey, Iterable<Unit> dictionaries) {
+	private UnitSearchResult search(String convertNumber, Iterable<Unit> conversions) {
+		System.out.println(conversions);
+		
 		StringBuilder messages = new StringBuilder();
 		URI link = null;
 		boolean success = false;
-		for (Unit unit : dictionaries) {
-			UnitSearchResult result = unit.search(searchKey);
+		for(Unit conversion: conversions) {
+			System.out.println(conversion.getUnitName());
+			UnitSearchResult result = conversion.convert(convertNumber);
+			System.out.println(result.getMessage());
 			if (result.isSuccess()) {
 				messages.append(result.getMessage());
-				messages.append("(" + unit.getUnitName() + ")\n");
+				messages.append("(" + conversion.getUnitName() + ")\n");
 				success = true;
 				if (link == null) {
 					link = result.getLink();
@@ -43,11 +47,12 @@ public class UnitSearch {
 		return new UnitSearchResult(success, messages.toString(), link);
 	}
 
-	public UnitSearchResult search(String dictKey, String searchKey) {
-		return search(searchKey, conversions.stream().filter(dict -> dict.getUnitName().equals(dictKey)).collect(Collectors.toList()));
+	public UnitSearchResult search(String unitKey, String convertNumber) {
+		return search(convertNumber, conversions.stream().filter(unit -> unit.getUnitName().equals(unitKey)).collect(Collectors.toList()));
 	}
-
-	public UnitSearchResult search(String searchKey) {
-		return search(searchKey, conversions);
+	
+	public UnitSearchResult search(String convertNumber) {
+		return search(convertNumber, conversions);
 	}
+	
 }

@@ -2,6 +2,13 @@ package tdt4250.unit.rest;
 
 import java.util.Collection;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
+
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferencePolicy;
@@ -26,17 +33,19 @@ public class UnitResource {
 	public UnitSearch getDictSearch() {
 		return new UnitSearch(conversions.toArray(new Unit[conversions.size()]));
 	}
-
+	
+	/*
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public UnitSearchResult search(@QueryParam("q") String q) throws JsonProcessingException {
 		return getDictSearch().search(q);
 	}
+	*/
 	
 	@GET
-	@Path("/{lang}")
+	@Path("/{conversion}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public UnitSearchResult search(@PathParam("lang") String lang, @QueryParam("q") String q) throws JsonProcessingException {
+	public UnitSearchResult search(@PathParam("conversion") String lang, @QueryParam("q") String q) throws JsonProcessingException {
 		return getDictSearch().search(lang, q);
 	}
 }

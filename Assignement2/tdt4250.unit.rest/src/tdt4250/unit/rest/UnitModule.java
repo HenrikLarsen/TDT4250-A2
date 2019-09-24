@@ -11,8 +11,6 @@ import com.fasterxml.jackson.databind.Module;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.module.SimpleSerializers;
 
-import tdt4250.unit.api.Unit;
-import tdt4250.unit.api.UnitSearch;
 import tdt4250.unit.api.UnitSearchResult;
 
 
@@ -20,7 +18,7 @@ public class UnitModule extends Module {
 
 	@Override
 	public String getModuleName() {
-		return "DictModule";
+		return "UnitModule";
 	}
 
 	@Override

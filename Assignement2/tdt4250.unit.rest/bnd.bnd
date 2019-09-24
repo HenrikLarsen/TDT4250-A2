@@ -4,7 +4,8 @@
 	osgi.cmpn;version=7.0.0,\
 	com.fasterxml.jackson.core.jackson-databind,\
 	com.fasterxml.jackson.core.jackson-core,\
-	tdt4250.unit.api
+	tdt4250.unit.api,\
+	org.apache.aries.javax.jax.rs-api
 
 -testpath: \
 	${junit},\

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.kmtomiles" increment="1569326607904">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="tdt4250.unit.kmtomiles"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="0.0.0.201909241203" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="0.0.0.201909241203" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="tdt4250.unit.kmtomiles"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="0.0.0.201909241203" type="Version"/>
+      <attribute name="osgi.wiring.host" value="tdt4250.unit.kmtomiles"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="tdt4250.unit.api.Unit" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="3170" type="Long"/>
+      <attribute name="url" value="generated/tdt4250.unit.kmtomiles.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="0E50675E45D641A4A1F8E1FA9B97086F47772647967A8337531882A430480714"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/henriklarsen/eclipse-workspace/Assignement2"/>
+      <attribute name="project.path" value="/tdt4250.unit.kmtomiles"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=tdt4250.unit.api)(&amp;(version&gt;=1.0.0)(!(version&gt;=1.1.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=tdt4250.unit.util)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>
