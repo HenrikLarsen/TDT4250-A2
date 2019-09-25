@@ -28,11 +28,21 @@ Shell commands
 
 Core conversions
 ------
+The preadded components:
 * km to miles
 * pounds to kg
 
 Structure
 ------
-The project consists of the tdt4250.unit.api, tdt4250.unit.util, tdt4250.unit.kmtomiles, tdt4250.unit.poundstokg, tdt4250.unit.servlet and tdt4250.dict3.rest and tdt4250.unit.gogo bundles. 
 It's modular, being split into bundles with minimal dependencies, and flexible, since new bundles can contribute additional dictionaries as components.
+
+The bundles the project consists of:
+* tdt4250.unit.api 
+* tdt4250.unit.util 
+* tdt4250.unit.servlet
+* tdt4250.unit.rest
+* tdt4250.unit.gogo 
+* tdt4250.unit.kmtomiles
+* tdt4250.unit.poundstokg
+
 
