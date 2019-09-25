@@ -18,6 +18,6 @@ Shell commands
 
 Structure
 ------
-The third variant consists of the tdt4250.unit.api, tdt4250.unit.util, tdt4250.unit.kmtomiles, tdt4250.unit.poundstokg, tdt4250.unit.servlet and tdt4250.dict3.rest and tdt4250.unit.gogo bundles. 
+The project consists of the tdt4250.unit.api, tdt4250.unit.util, tdt4250.unit.kmtomiles, tdt4250.unit.poundstokg, tdt4250.unit.servlet and tdt4250.dict3.rest and tdt4250.unit.gogo bundles. 
 It's modular, being split into bundles with minimal dependencies, and flexible, since new bundles can contribute additional dictionaries as components.
 
