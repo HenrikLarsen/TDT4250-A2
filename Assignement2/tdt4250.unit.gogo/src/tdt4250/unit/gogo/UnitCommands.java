@@ -91,7 +91,7 @@ public class UnitCommands {
 						found = true;
 						try {
 							UnitSearchResult search = unit.convert(s);
-							System.out.println(unit.getUnitName() + ": " + search.getMessage());
+							System.out.println(search.getMessage());
 						} finally {
 							bc.ungetService(serviceReference);
 						}
