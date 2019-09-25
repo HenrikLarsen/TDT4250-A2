@@ -26,12 +26,6 @@ Shell commands
   * Removes a conversion component
   * Example: remove test
 
-Core conversions
-------
-The preadded components:
-* km to miles
-* pounds to kg
-
 Structure
 ------
 It's modular, being split into bundles with minimal dependencies, and flexible, since new bundles can contribute additional dictionaries as components.
