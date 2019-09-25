@@ -14,17 +14,10 @@ To test it you can do a conversion using: http://localhost:8080/unit/kmtomiles?q
 
 Shell commands
 ------
-* list
-  * Lists all conversions components
-* convert
-  * converts the given number
-  * Example: convert kmtomiles 45
-* add
-  * Adds a new conversion component
-  * Example: add test "x*2"
-* remove
-  * Removes a conversion component
-  * Example: remove test
+* `list` - Lists all conversion components
+* `convert {conversion name} {number to convert}` - converts the given number (e.g. `convert kmtomiles 5`)
+* `add {conversion name} {conversion equation}` - Adds a new conversion component (e.g. `add kgtopounds "x*2.205"`)
+* `remove {conversion name}` - Removes manually added conversion component (e.g. `remove kgtopounds`)
 
 Structure
 ------
