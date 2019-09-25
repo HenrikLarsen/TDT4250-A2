@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.kmtomiles" increment="1569326607904">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.kmtomiles" increment="1569412150931">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="tdt4250.unit.kmtomiles"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="0.0.0.201909241203" type="Version"/>
+      <attribute name="version" value="0.0.0.201909251149" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="0.0.0.201909241203" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201909251149" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="tdt4250.unit.kmtomiles"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="0.0.0.201909241203" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201909251149" type="Version"/>
       <attribute name="osgi.wiring.host" value="tdt4250.unit.kmtomiles"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" value="tdt4250.unit.api.Unit" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="3170" type="Long"/>
+      <attribute name="size" value="3192" type="Long"/>
       <attribute name="url" value="generated/tdt4250.unit.kmtomiles.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="0E50675E45D641A4A1F8E1FA9B97086F47772647967A8337531882A430480714"/>
+      <attribute name="osgi.content" value="5F23333D415C5AB4D8146698BBA1F09DA3D1029E18F4E268237C857E92184215"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/henriklarsen/eclipse-workspace/Assignement2"/>

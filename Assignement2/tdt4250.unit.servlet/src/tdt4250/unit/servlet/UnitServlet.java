@@ -53,9 +53,7 @@ public class UnitServlet extends HttpServlet implements Servlet {
 		}
 	
 		String q = request.getParameter("q");
-		
-		System.out.println(segments.get(0));
-		System.out.println(q);
+	
 		
 		UnitSearchResult result = unitSearch.search(segments.get(0), q);
 		response.setContentType("text/plain");

@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.script.*;
 
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
@@ -21,10 +25,9 @@ import tdt4250.unit.api.UnitSearchResult;
 		configurationPolicy = ConfigurationPolicy.REQUIRE
 		)
 public class UnitsConvert implements Unit {
-
 	public static final String FACTORY_PID = "tdt4250.unit.util.UnitsConvert";
 	
-	public static final String UNIT_CONVERSION_PROP = "unitConvert";
+	public static final String UNIT_CONVERSION_PROP = "unitConversion";
 	public static final String UNIT_NAME_PROP = "unitName";
 	
 	private String name;
@@ -45,7 +48,7 @@ public class UnitsConvert implements Unit {
 	
 	public @interface UnitsConvertConfig {
 		String unitName();
-		String conversion() default "";
+		String unitConversion() default "";
 	}
 
 	@Activate
@@ -61,24 +64,33 @@ public class UnitsConvert implements Unit {
 	protected void update(BundleContext bc, UnitsConvertConfig config) {
 		System.out.println("Init");
 		setUnitName(config.unitName());
-		setConversion(config.conversion());
+		setConversion(config.unitConversion());
 	}
 
 	protected String getSuccessMessageStringFormat() {
-		return "Yes, %s was found!";
+		return this.name + ": %s was converted to: %s2 " ;
 	}
 
-	protected String getFailureMessageStringFormat() {
-		return "Could not convert %s " + name;
+	protected String getFailureMessageStringFormat(String error) {
+		return this.name + ": Could not convert %s \n"+ error;
 	}
 	
-	// TODO Conversion er lik null. HVORFOR?
 	public UnitSearchResult convert(String convertNumber) {
-		System.out.println("Conversion: " + conversion);
-		if (conversion != null) {
-			return new UnitSearchResult(true, String.format(getSuccessMessageStringFormat(), convertNumber), null);
-		} else {
-			return new UnitSearchResult(false, String.format(getFailureMessageStringFormat(), convertNumber), null);
+        Map<String, Object> vars = new HashMap<String, Object>();
+		
+        try {
+			vars.put("x", Double.parseDouble(convertNumber));
+		}catch(NumberFormatException e) {
+			return new UnitSearchResult(false, String.format(getFailureMessageStringFormat("Bad input format. Input should be a numbner."), convertNumber), null);
 		}
+
+		try {
+			ScriptEngine engine = new ScriptEngineManager().getEngineByName("JavaScript");
+			double result  =  (double) engine.eval(this.conversion, new SimpleBindings(vars));		
+			return new UnitSearchResult(true, String.format(getSuccessMessageStringFormat(), convertNumber, result), null);
+		}catch(ScriptException io) {
+			return new UnitSearchResult(false, String.format(getFailureMessageStringFormat(""), convertNumber), null);
+		}
+		
 	}
 }

@@ -23,22 +23,24 @@ public class UnitSearch {
 	}
 	
 	private UnitSearchResult search(String convertNumber, Iterable<Unit> conversions) {
-		System.out.println(conversions);
+		//System.out.println(conversions);
 		
 		StringBuilder messages = new StringBuilder();
 		URI link = null;
 		boolean success = false;
 		for(Unit conversion: conversions) {
-			System.out.println(conversion.getUnitName());
 			UnitSearchResult result = conversion.convert(convertNumber);
-			System.out.println(result.getMessage());
+			
 			if (result.isSuccess()) {
+				// Hvorfor henter getMessage når den bare er successful?
 				messages.append(result.getMessage());
-				messages.append("(" + conversion.getUnitName() + ")\n");
 				success = true;
 				if (link == null) {
 					link = result.getLink();
 				}
+				break;
+			}else {
+				messages.append(result.getMessage());
 			}
 		}
 		if (messages.length() == 0) {
