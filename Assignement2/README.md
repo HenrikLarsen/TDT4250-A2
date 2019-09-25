@@ -10,9 +10,9 @@ Setup
 The root project and folder was created using the BndTools' Bnd OSGi Workspace wizard, and each bundle with the Bnd OSGi Project wizard. Which bundle template to use depends on the specific bundle, there are api, component and servlet bundles in this project.
 
 To run the project, you should open the launch.bndrun file in the servlet bundle, make sure it resolves and use Run OSGi. 
-To test it you can do a conversion using: http://localhost:8080/unit/kmtomiles?q=54 in a browser.
+To test it you can do a convertion using http://localhost:8080/unit/{conversion}?q={number} in a browser (e.g. localhost:8080/unit/kmtomiles?q=5).
 
-Shell commands
+Gogo shell commands
 ------
 * `list` - Lists all conversion components
 * `convert {conversion name} {number to convert}` - converts the given number (e.g. `convert kmtomiles 5`)
