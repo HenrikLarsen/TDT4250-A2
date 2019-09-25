@@ -1,48 +1,47 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.util" increment="1569415998202">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.gogo" increment="1569415998763">
   <resource>
     <capability namespace="osgi.identity">
-      <attribute name="osgi.identity" value="tdt4250.unit.util"/>
+      <attribute name="osgi.identity" value="tdt4250.unit.gogo"/>
       <attribute name="type" value="osgi.bundle"/>
       <attribute name="version" value="0.0.0.201909251253" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="bundle-version" value="0.0.0.201909251253" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="tdt4250.unit.util"/>
+      <attribute name="osgi.wiring.bundle" value="tdt4250.unit.gogo"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="bundle-version" value="0.0.0.201909251253" type="Version"/>
-      <attribute name="osgi.wiring.host" value="tdt4250.unit.util"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,tdt4250.unit.api"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="tdt4250.unit.util"/>
+      <attribute name="osgi.wiring.host" value="tdt4250.unit.gogo"/>
     </capability>
     <capability namespace="osgi.service">
-      <attribute name="objectClass" value="tdt4250.unit.api.Unit" type="List&lt;String&gt;"/>
+      <attribute name="objectClass" value="tdt4250.unit.gogo.UnitCommands" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="6428" type="Long"/>
-      <attribute name="url" value="generated/tdt4250.unit.util.jar"/>
+      <attribute name="size" value="6993" type="Long"/>
+      <attribute name="url" value="generated/tdt4250.unit.gogo.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="93754AB5A0FC16FC8FACBCDCEF1ACDF660E323804F8C8D1E21F7A98CD87B90EA"/>
+      <attribute name="osgi.content" value="77A99087C1A75DC5D23BFD6BC914BDEA5CFACFE9C06EA767E599DD4475CD06E3"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/henriklarsen/eclipse-workspace/Assignement2"/>
-      <attribute name="project.path" value="/tdt4250.unit.util"/>
+      <attribute name="project.path" value="/tdt4250.unit.gogo"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.script))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.service.command)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.9.0)(!(version&gt;=2.0.0))))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=tdt4250.unit.api)(&amp;(version&gt;=1.0.0)(!(version&gt;=1.1.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.cm)(&amp;(version&gt;=1.6.0)(!(version&gt;=2.0.0))))"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=tdt4250.unit.util)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=tdt4250.unit.api)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.osgi.service.cm.ConfigurationAdmin)"/>
+      <directive name="effective" value="active"/>
     </requirement>
     <requirement namespace="osgi.extender">
       <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>

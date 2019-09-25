@@ -32,7 +32,6 @@ public class UnitSearch {
 			UnitSearchResult result = conversion.convert(convertNumber);
 			
 			if (result.isSuccess()) {
-				// Hvorfor henter getMessage når den bare er successful?
 				messages.append(result.getMessage());
 				success = true;
 				if (link == null) {
@@ -46,6 +45,7 @@ public class UnitSearch {
 		if (messages.length() == 0) {
 			messages.append(DEFAULT_MESSAGE);
 		}
+		System.out.println(messages);
 		return new UnitSearchResult(success, messages.toString(), link);
 	}
 

@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.api" increment="1569411906357">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.api" increment="1569414992915">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="tdt4250.unit.api"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.201909251145" type="Version"/>
+      <attribute name="version" value="1.0.0.201909251236" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.201909251145" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201909251236" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="tdt4250.unit.api"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.201909251145" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201909251236" type="Version"/>
       <attribute name="osgi.wiring.host" value="tdt4250.unit.api"/>
     </capability>
     <capability namespace="osgi.wiring.package">
@@ -19,10 +19,10 @@
       <attribute name="osgi.wiring.package" value="tdt4250.unit.api"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="6735" type="Long"/>
+      <attribute name="size" value="6772" type="Long"/>
       <attribute name="url" value="generated/tdt4250.unit.api.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="D4364CC48E5E8297036618076E7C4FD3F054B7E1888CE89202AEFC111EB99566"/>
+      <attribute name="osgi.content" value="7CD134AD9F23A54958B60A167BDC6D5CE2E79FC75530ADDEF65C57E741F81C18"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/henriklarsen/eclipse-workspace/Assignement2"/>

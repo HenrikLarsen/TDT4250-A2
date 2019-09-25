@@ -1,16 +1,11 @@
 package tdt4250.unit.util;
 
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.script.*;
 
-import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -62,13 +57,12 @@ public class UnitsConvert implements Unit {
 	}
 
 	protected void update(BundleContext bc, UnitsConvertConfig config) {
-		System.out.println("Init");
 		setUnitName(config.unitName());
 		setConversion(config.unitConversion());
 	}
 
 	protected String getSuccessMessageStringFormat() {
-		return this.name + ": %s was converted to: %s2 " ;
+		return this.name + ": %s was converted to: %.2f " ;
 	}
 
 	protected String getFailureMessageStringFormat(String error) {
@@ -81,13 +75,13 @@ public class UnitsConvert implements Unit {
         try {
 			vars.put("x", Double.parseDouble(convertNumber));
 		}catch(NumberFormatException e) {
-			return new UnitSearchResult(false, String.format(getFailureMessageStringFormat("Bad input format. Input should be a numbner."), convertNumber), null);
+			return new UnitSearchResult(false, String.format(getFailureMessageStringFormat("Bad input format. Input should be a number."), convertNumber), null);
 		}
 
 		try {
 			ScriptEngine engine = new ScriptEngineManager().getEngineByName("JavaScript");
 			double result  =  (double) engine.eval(this.conversion, new SimpleBindings(vars));		
-			return new UnitSearchResult(true, String.format(getSuccessMessageStringFormat(), convertNumber, result), null);
+			return new UnitSearchResult(true, String.format(getSuccessMessageStringFormat(), convertNumber, (float)result), null);
 		}catch(ScriptException io) {
 			return new UnitSearchResult(false, String.format(getFailureMessageStringFormat(""), convertNumber), null);
 		}
