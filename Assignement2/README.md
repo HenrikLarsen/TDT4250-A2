@@ -14,7 +14,17 @@ To test it you can do a conversion using: http://localhost:8080/unit/kmtomiles?q
 
 Shell commands
 ------
-
+* list
+  * Lists all conversions components
+* convert
+  * converts the given number
+  * Example: convert kmtomiles 45
+* add
+  * Adds a new conversion component
+  * Example: add test "x*2"
+* remove
+  * Removes a conversion component
+  * Example: remove test
 
 Structure
 ------
