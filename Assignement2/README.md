@@ -26,6 +26,11 @@ Shell commands
   * Removes a conversion component
   * Example: remove test
 
+Core conversions
+------
+* km to miles
+* pounds to kg
+
 Structure
 ------
 The project consists of the tdt4250.unit.api, tdt4250.unit.util, tdt4250.unit.kmtomiles, tdt4250.unit.poundstokg, tdt4250.unit.servlet and tdt4250.dict3.rest and tdt4250.unit.gogo bundles. 
