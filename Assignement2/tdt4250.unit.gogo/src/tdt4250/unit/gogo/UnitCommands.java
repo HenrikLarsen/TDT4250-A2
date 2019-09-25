@@ -72,11 +72,11 @@ public class UnitCommands {
 		System.out.println();
 	}
 
-	@Descriptor("convert a number")
+	@Descriptor("convert a number using a conversion")
 	public void convert(
-			@Descriptor("the unitconversion to look up")
+			@Descriptor("the unitconversion to use")
 			String name,
-			@Descriptor("the word to look up")
+			@Descriptor("the number to convert")
 			String s
 			
 			) {

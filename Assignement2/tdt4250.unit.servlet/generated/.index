@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.servlet" increment="1569416701606">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.servlet" increment="1569417237874">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="tdt4250.unit.servlet"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="0.0.0.201909251305" type="Version"/>
+      <attribute name="version" value="0.0.0.201909251313" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="0.0.0.201909251305" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201909251313" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="tdt4250.unit.servlet"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="0.0.0.201909251305" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201909251313" type="Version"/>
       <attribute name="osgi.wiring.host" value="tdt4250.unit.servlet"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" value="javax.servlet.Servlet" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="5145" type="Long"/>
+      <attribute name="size" value="5171" type="Long"/>
       <attribute name="url" value="generated/tdt4250.unit.servlet.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="2E3BA37718F2F2EFBBF9DC8678E4A37646E2DA20A1E5F42A53AC0B0AF2B840BA"/>
+      <attribute name="osgi.content" value="9412FE8ADCD180952347192EC3419585459E4170A75A2A4C73791C30A4BC504D"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/henriklarsen/eclipse-workspace/Assignement2"/>

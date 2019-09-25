@@ -48,7 +48,7 @@ public class UnitServlet extends HttpServlet implements Servlet {
 		}
 		
 		if (segments.size() != 1 ) {
-			response.sendError(HttpServletResponse.SC_NOT_ACCEPTABLE, "Request must contain max 1 path segment");
+			response.sendError(HttpServletResponse.SC_NOT_ACCEPTABLE, "Request must be on format: unit/{conversion}?q={number}");
 			return;
 		}
 	
