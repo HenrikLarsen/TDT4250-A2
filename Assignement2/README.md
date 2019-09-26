@@ -14,7 +14,7 @@ To test it you can do a convertion using http://localhost:8080/unit/{conversion}
 
 Gogo shell commands
 ------
-* `list` - Lists all conversion components
+* `list` - Lists all active conversion components
 * `convert {conversion name} {number to convert}` - converts the given number (e.g. `convert kmtomiles 5`)
 * `add {conversion name} {conversion equation}` - Adds a new conversion component (e.g. `add kgtopounds "x*2.205"`)
 * `remove {conversion name}` - Removes manually added conversion component (e.g. `remove kgtopounds`)
