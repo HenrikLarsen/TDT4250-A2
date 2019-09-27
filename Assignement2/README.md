@@ -22,12 +22,12 @@ Structure
 It's modular, being split into bundles with minimal dependencies, and flexible, since new bundles can contribute additional dictionaries as components.
 
 The bundles the project consists of:
-* tdt4250.unit.api 
-* tdt4250.unit.util 
-* tdt4250.unit.servlet
-* tdt4250.unit.rest
-* tdt4250.unit.gogo 
-* tdt4250.unit.kmtomiles
-* tdt4250.unit.poundstokg
+* tdt4250.unit.api: The core interfaces and classes used for convertions.
+* tdt4250.unit.util: It contains a utility class used for managing conversions. 
+* tdt4250.unit.servlet: The Servlet component implementing a web service for converting numbers between different units.
+* tdt4250.unit.rest: Currently not used
+* tdt4250.unit.gogo: Gogo shell commands for managing Unit conversion components
+* tdt4250.unit.kmtomiles: Component for converting distance from kilometers to miles
+* tdt4250.unit.poundstokg: Component for converting distance from pounds to kilograms
 
 
