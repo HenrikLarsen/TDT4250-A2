@@ -1,8 +1,6 @@
 # TDT4250-A2
 Second assignment in TDT4250 Advanced Software Design
 
-About
-------
 The goal of assignment 2 is to get experience with OSGi and how bundles and components contribute to modularity and extensibility. 
 
 Setup
